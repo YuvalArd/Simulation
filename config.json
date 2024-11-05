@@ -1,0 +1,27 @@
+{
+  "consts": {
+    "samples": 8000,
+    "space_size": 500,
+    "slope": -0.75
+  },
+  "subspace_weights": {
+    "video_public": {"function": "linear", "arguments": {"start": 0.8, "end": 0.4}, "limits": {"min": 0.4, "max": 0.9}},
+    "video_private": {"function": "linear", "arguments": {"start": 0.4, "end": 0.4}, "limits": {"min": 0.3, "max": 0.9}},
+    "communication": {"function": "linear", "arguments": {"start": 0.2, "end": 0.8}, "limits": {"min": 0.1, "max": 1.0}},
+    "private": {"function": "linear", "arguments": {"start": 0.5, "end": 0.5}, "limits": {"min": 0.5, "max": 0.5}}
+  },
+  "subspace_sizes": {
+    "video_public": [1],
+    "video_private": [1],
+    "communication": [1]
+  },
+  "index_change": {
+    "mix": true,
+    "from": [1],
+    "to": [[0], [1], [2]],
+    "shift": false,
+    "shift_list": [0, 1, 2]
+  },
+  "weight_step": 0.2,
+  "partial_pcs": 0.8
+}
